@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "FindOnPage Bookmarklets",
+  "version": "0.5",
+
+  "description": "Adds bookmarklets to highlight search keywords on any page.",
+
+  "icons": {
+    "144": "icon.svg"
+  },
+  
+  "background": {
+    "scripts": ["fsbackground.js"]
+    },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery331.js","jquery.mark.js","fscontent.js"]
+    }
+  ],
+  
+  "applications": {
+    "gecko": {
+      "id": "searchwpbookmarklets@verbis.net"
+    }
+  },
+  "permissions": [
+    "bookmarks"
+  ]
+
+}
