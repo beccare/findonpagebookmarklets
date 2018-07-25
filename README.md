@@ -1,5 +1,5 @@
 # FindOnPage Bookmarklets
-Add dynamically page highlighting buttons according to a previous Google search. Meant to become a replacement for the famous SearchWP on Firefox Quantum.
+An <a href="https://addons.mozilla.org/en-US/firefox/addon/findonpage-bookmarklets">add-on for Firefox v.57+</a>. Add dynamically page highlighting buttons according to a previous Google search. Meant to become a replacement for the famous SearchWP on Firefox Quantum.
 <br/><br/>
 Bookmarklets are bookmarks with javascript instead of normal URLs. They show up in "button" form when located in the bookmarks toolbar. A click on such a button will highlight text on any page and jump to the first occurrence.<br/><br/>
 <img src="https://addons.cdn.mozilla.net/user-media/previews/full/205/205472.png" width="500">
