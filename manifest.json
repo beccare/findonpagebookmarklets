@@ -1,32 +1,36 @@
 {
-  "manifest_version": 2,
-  "name": "FindOnPage Bookmarklets",
-  "version": "0.5",
+	"manifest_version": 2,
+	"name": "FindOnPage Bookmarklets",
+	"version": "1.1",
 
-  "description": "Adds bookmarklets to highlight search keywords on any page.",
+	"description": "Adds bookmarklets to highlight search keywords on any page.",
 
-  "icons": {
-    "144": "icon.svg"
-  },
-  
-  "background": {
-    "scripts": ["fsbackground.js"]
-    },
+	"icons": {
+		"144": "icon.svg"
+	},
 
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["jquery331.js","jquery.mark.js","fscontent.js"]
-    }
-  ],
-  
-  "applications": {
-    "gecko": {
-      "id": "searchwpbookmarklets@verbis.net"
-    }
-  },
-  "permissions": [
-    "bookmarks"
-  ]
+	"background": {
+		"scripts": ["fsbackground.js"]
+	},
+
+	"content_scripts": [{
+			"matches": ["<all_urls>"],
+			"js": ["jquery331.js", "jquery.mark.js", "fscontent.js"]
+		}
+	],
+	"options_ui": {
+		"page": "options.html",
+		"browser_style": true
+	},
+
+	"applications": {
+		"gecko": {
+			"id": "searchwpbookmarklets@verbis.net"
+		}
+	},
+	"permissions": [
+		"bookmarks",
+		"storage"
+	]
 
 }

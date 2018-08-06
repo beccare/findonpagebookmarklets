@@ -11,18 +11,18 @@ browser.runtime.onMessage.addListener(request => {
 		},onRejected);
 		browser.bookmarks.create({
 			title: '◧',
-			url: 'javascript:(function(){var event=new CustomEvent("swpfsmod_mode");document.dispatchEvent(event)})()//8a56585e1a07f0f16c1a096fb81c65e1',
+			url: 'javascript:/*__partial_match__*/(function(){document.dispatchEvent(new CustomEvent("swpfsmod_mod"))})()//8a56585e1a07f0f16c1a096fb81c65e1',
 			parentId: "toolbar_____"
 		})
 		browser.bookmarks.create({
 			title: '▲',
-			url: 'javascript:(function(){var event=new CustomEvent("swpfsmod_back");document.dispatchEvent(event)})()//8a56585e1a07f0f16c1a096fb81c65e1',
+			url: 'javascript:/*__previous_occurrence__*/(function(){document.dispatchEvent(new CustomEvent("swpfsmod_back"))})()//8a56585e1a07f0f16c1a096fb81c65e1',
 			parentId: "toolbar_____"
 		})
 		request.keywords.split(' ').reverse().forEach(kw => {
 			browser.bookmarks.create({
-				title: kw,
-				url: 'javascript:(function(){var event=new CustomEvent("swpfsmod",{detail:{kw:"'+kw+'"}});document.dispatchEvent(event)})()//8a56585e1a07f0f16c1a096fb81c65e1',
+				title: kw.replace("_swpfsmod_"," "),
+				url: 'javascript:/*__next_occurrence__*/(function(){document.dispatchEvent(new CustomEvent("swpfsmod",{detail:{kw:"'+kw.replace("_swpfsmod_"," ")+'"}}))})()//8a56585e1a07f0f16c1a096fb81c65e1',
 				parentId: "toolbar_____"
 			})
 		});
